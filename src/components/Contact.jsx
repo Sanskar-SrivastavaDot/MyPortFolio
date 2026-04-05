@@ -240,7 +240,7 @@ export default function Contact() {
                     )}
                   </button>
                   <p className="text-center text-xs text-slate-600 font-mono">
-                    // or email me directly at srivastavasanskar@31gmail.com
+                    // or email me directly at srivastavasanskar31@gmail.com
                   </p>
                 </form>
               )}
