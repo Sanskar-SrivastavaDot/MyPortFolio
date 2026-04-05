@@ -6,7 +6,7 @@ export const projects = [
       "A personal portfolio website showcasing projects, skills, and experience. Built with a modern dark theme, smooth animations, and fully responsive design.",
     tags: ["React", "Tailwind CSS", "JavaScript"],
     github: "https://github.com/Sanskar-SrivastavaDot/MyPortFolio",
-    live: "https://sanskar.dev",
+    live: "portfolio-sanskar-srivastava.vercel.app",
     featured: true,
     gradient: "from-blue-500/20 to-violet-500/20",
     accent: "blue",

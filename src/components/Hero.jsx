@@ -136,7 +136,7 @@ export default function Hero() {
             },
             {
               icon: <Mail size={18} />,
-              href: "https://mailto:srivastavasanskar31@example.com",
+              href: "https://mailto:srivastavasanskar31@gmail.com",
               label: "Email",
             },
           ].map((link) => (
