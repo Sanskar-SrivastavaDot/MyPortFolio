@@ -34,5 +34,5 @@ export const projects = [
     featured: true,
     gradient: "from-pink-500/20 to-voilet-500/20",
     accent: "pink",
-  }
+  },
 ]
