@@ -22,5 +22,17 @@ export const projects = [
     featured: true,
     gradient: "from-violet-500/20 to-pink-500/20",
     accent: "violet",
+  },
+  {
+    id: 3,
+    title: "Weather App",
+    description:
+      "Developed a responsive Weather App that fetches real-time weather data using an API. It allows users to search cities and view details like temperature, humidity, wind speed, and weather conditions through a simple and user-friendly interface.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/Sanskar-SrivastavaDot/WeatherApp",
+    live: "https://weather-app-theta-lemon-16.vercel.app",
+    featured: true,
+    gradient: "from-pink-500/20 to-voilet-500/20",
+    accent: "pink",
   }
 ]
