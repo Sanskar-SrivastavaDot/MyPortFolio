@@ -1,6 +1,18 @@
 export const projects = [
   {
     id: 1,
+    title: "CivicAI",
+    description:
+      "An AI-assisted government portal for citizens to report civic issues, track official responses via authorities, and hold authorities accountable — transparently and efficiently.",
+    tags: ["React", "Node", "Express","MongoDB"],
+    github: "https://github.com/Sanskar-SrivastavaDot/vertex-CivicAI",
+    live: "https://vertex-ashy.vercel.app/",
+    featured: true,
+    gradient: "from-blue-500/20 to-violet-500/20",
+    accent: "blue",
+  },
+  {
+    id: 2,
     title: "Portfolio Website",
     description:
       "A personal portfolio website showcasing projects, skills, and experience. Built with a modern dark theme, smooth animations, and fully responsive design.",
@@ -12,7 +24,7 @@ export const projects = [
     accent: "blue",
   },
   {
-    id: 2,
+    id: 3,
     title: "Todo App",
     description:
       "A clean, minimalist todo application with task filtering, local storage persistence, and smooth UI transitions. Supports categories and priority levels.",
@@ -24,7 +36,7 @@ export const projects = [
     accent: "violet",
   },
   {
-    id: 3,
+    id: 4,
     title: "Weather App",
     description:
       "Developed a responsive Weather App that fetches real-time weather data using an API. It allows users to search cities and view details like temperature, humidity, wind speed, and weather conditions through a simple and user-friendly interface.",
