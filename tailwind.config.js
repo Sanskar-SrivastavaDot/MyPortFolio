@@ -7,53 +7,34 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ["'Syne'", "sans-serif"],
-        body: ["'Outfit'", "sans-serif"],
-        mono: ["'JetBrains Mono'", "monospace"],
+        display: ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "'Liberation Mono'", "'Courier New'", "monospace"],
+        body: ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "'Liberation Mono'", "'Courier New'", "monospace"],
+        mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "'Liberation Mono'", "'Courier New'", "monospace"],
       },
       colors: {
+        white: "#ffffff",   // Pure white for text, borders, shadows
+        black: "#2e302b",   // Dark background color for inverted hover text
+        slate: {
+          100: "#f8f9fa",
+          200: "#e9ecef",
+          300: "#dee2e6",
+          400: "#ced4da",
+          500: "#adb5bd",
+          600: "#6c757d",
+        },
         dark: {
-          900: "#03030a",
-          800: "#07070f",
-          700: "#0d0d1a",
-          600: "#13132a",
+          900: "#2e302b",   // FSO Dark Olive/Grey Background
+          800: "#262823",
+          700: "#1d1f1b",
+          600: "#141512",
         },
         brand: {
-          blue: "#3b82f6",
-          "blue-light": "#60a5fa",
-          "blue-dim": "#1d4ed8",
-          violet: "#8b5cf6",
-          "violet-light": "#a78bfa",
+          blue: "#fceba0",  // Pale Yellow Accent (from the FSO banner)
+          "blue-light": "#fdf1bc",
+          "blue-dim": "#d9c882",
+          violet: "#ffffff",
+          "violet-light": "#f8f9fa",
         },
-      },
-      backgroundImage: {
-        "grid-pattern":
-          "linear-gradient(rgba(59,130,246,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.04) 1px, transparent 1px)",
-        "glow-conic":
-          "conic-gradient(from 180deg at 50% 50%, #3b82f6 0deg, #8b5cf6 120deg, #3b82f6 360deg)",
-      },
-      backgroundSize: {
-        grid: "40px 40px",
-      },
-      animation: {
-        "border-glow": "borderGlow 2s ease-in-out infinite alternate",
-        float: "float 6s ease-in-out infinite",
-        "pulse-slow": "pulse 4s cubic-bezier(0.4,0,0.6,1) infinite",
-      },
-      keyframes: {
-        borderGlow: {
-          "0%": { boxShadow: "0 0 10px rgba(59,130,246,0.3)" },
-          "100%": { boxShadow: "0 0 30px rgba(139,92,246,0.5)" },
-        },
-        float: {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-12px)" },
-        },
-      },
-      boxShadow: {
-        "glow-blue": "0 0 20px rgba(59,130,246,0.25)",
-        "glow-violet": "0 0 20px rgba(139,92,246,0.25)",
-        "card-dark": "0 4px 40px rgba(0,0,0,0.6)",
       },
     },
   },

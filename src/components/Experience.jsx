@@ -70,7 +70,7 @@ export default function Experience() {
 
   return (
     <section id="experience" className="py-28 relative">
-      <div className="orb w-[500px] h-[300px] bg-brand-violet/5 bottom-0 left-0 pointer-events-none" />
+
 
       <div className="section-container" ref={ref}>
         {/* Header */}
@@ -183,7 +183,7 @@ export default function Experience() {
               <div className="flex flex-wrap gap-3">
                 {[
                   { name: "LeetCode", val: "300+" },
-                  { name: "Codeforces", val: "Div 4" },
+                  { name: "Codeforces", val: "Div 3" },
                   { name: "GFG", val: "Active" },
                 ].map((p) => (
                   <div

@@ -17,25 +17,7 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
     >
-      {/* Background Grid */}
-      <div
-        className="absolute inset-0 bg-grid-pattern bg-grid opacity-100 pointer-events-none"
-        aria-hidden
-      />
 
-      {/* Orbs */}
-      <div
-        className="orb w-[500px] h-[500px] bg-brand-blue/10 top-[-100px] left-[-150px]"
-        aria-hidden
-      />
-      <div
-        className="orb w-[400px] h-[400px] bg-brand-violet/10 bottom-[-80px] right-[-100px]"
-        aria-hidden
-      />
-      <div
-        className="orb w-[300px] h-[300px] bg-brand-blue/5 top-[40%] right-[20%]"
-        aria-hidden
-      />
 
       {/* Center Content */}
       <div className="section-container text-center relative z-10">
@@ -45,10 +27,9 @@ export default function Hero() {
           initial="hidden"
           animate="show"
           custom={0}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-blue/20 bg-brand-blue/5 mb-8"
+          className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 border-2 border-brand-blue bg-transparent mb-6 sm:mb-8 mx-4 sm:mx-0"
         >
-          <Sparkles size={13} className="text-brand-blue" />
-          <span className="font-mono text-xs text-brand-blue tracking-widest uppercase">
+          <span className="font-mono text-[10px] sm:text-xs text-brand-blue tracking-widest uppercase text-center">
             Open to Internships &amp; Opportunities
           </span>
         </motion.div>
@@ -59,7 +40,7 @@ export default function Hero() {
           initial="hidden"
           animate="show"
           custom={0.1}
-          className="font-display font-extrabold text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-none tracking-tight mb-4"
+          className="font-mono font-bold text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-none mb-4 px-2"
         >
           <span className="text-white">Sanskar</span>
           <br />
@@ -72,13 +53,13 @@ export default function Hero() {
           initial="hidden"
           animate="show"
           custom={0.2}
-          className="flex items-center justify-center gap-3 my-6"
+          className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 my-4 sm:my-6 px-4"
         >
-          <span className="h-px w-12 bg-gradient-to-r from-transparent to-brand-blue/60" />
-          <span className="font-mono text-sm text-slate-400 tracking-wider">
+          <span className="hidden sm:block h-px w-12 bg-gradient-to-r from-transparent to-brand-blue/60" />
+          <span className="font-mono text-[11px] sm:text-sm text-slate-400 tracking-wider text-center">
             Engineering Student &nbsp;·&nbsp; Developer &nbsp;·&nbsp; DSA 
           </span>
-          <span className="h-px w-12 bg-gradient-to-l from-transparent to-brand-violet/60" />
+          <span className="hidden sm:block h-px w-12 bg-gradient-to-l from-transparent to-brand-violet/60" />
         </motion.div>
 
         {/* Tagline */}
@@ -87,7 +68,7 @@ export default function Hero() {
           initial="hidden"
           animate="show"
           custom={0.3}
-          className="font-body text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-10"
+          className="font-body text-slate-400 text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-8 sm:mb-10 px-4"
         >
           Building clean, efficient software — one algorithm at a time.
           <br className="hidden sm:block" />
@@ -103,9 +84,8 @@ export default function Hero() {
           className="flex flex-wrap items-center justify-center gap-4 mb-14"
         >
           <Link to="projects" smooth duration={700} offset={-80}>
-            <button className="btn-primary text-sm">
+            <button className="btn-primary">
               <span>View Projects</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-white/60 animate-pulse" />
             </button>
           </Link>
           <Link to="contact" smooth duration={700} offset={-80}>
@@ -136,7 +116,7 @@ export default function Hero() {
             },
             {
               icon: <Mail size={18} />,
-              href: "https://mailto:srivastavasanskar31@gmail.com",
+              href: "mailto:srivastavasanskar31@gmail.com",
               label: "Email",
             },
           ].map((link) => (
@@ -146,9 +126,9 @@ export default function Hero() {
               target="_blank"
               rel="noreferrer"
               aria-label={link.label}
-              className="p-3 rounded-xl border border-white/[0.07] bg-white/[0.03] text-slate-400
-                         hover:text-white hover:border-brand-blue/40 hover:bg-brand-blue/10
-                         transition-all duration-300 hover:-translate-y-1"
+              className="p-3 border-2 border-white bg-transparent text-slate-300
+                         hover:text-[#252525] hover:bg-white
+                         transition-all duration-300"
             >
               {link.icon}
             </a>

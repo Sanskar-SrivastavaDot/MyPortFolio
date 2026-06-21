@@ -23,7 +23,7 @@ const socials = [
   },
   {
     icon: <Mail size={17} />,
-    href: "https://mailto:srivastavasanskar31@gmail.com",
+    href: "mailto:srivastavasanskar31@gmail.com",
     label: "Email",
   },
 ]
@@ -44,7 +44,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-slate-500 text-sm font-body mt-2 max-w-xs">
-              Engineering Student · Developer · DSA 
+              Engineering Student · Developer
             </p>
           </div>
 
@@ -88,7 +88,7 @@ export default function Footer() {
           <p className="text-slate-600 text-xs font-mono">
             © {year} Sanskar Srivastava. Built with React &amp; Tailwind CSS.
           </p>
-          <p className="text-slate-700 text-xs font-mono">
+          <p className="text-slate-400 text-xs font-mono">
             // designed &amp; coded with ❤️ by me
           </p>
         </div>

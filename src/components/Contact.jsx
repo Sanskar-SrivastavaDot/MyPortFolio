@@ -7,7 +7,7 @@ const socialLinks = [
     icon: <Mail size={18} />,
     label: "Email",
     value: "srivastavasanskar31@gmail.com",
-    href: "https://mailto:srivastavasanskar31@gmail.com",
+    href: "mailto:srivastavasanskar31@gmail.com",
     color: "blue",
   },
   {
@@ -54,16 +54,42 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setLoading(true)
-    // Simulate submission — replace with your form endpoint (e.g. Formspree)
-    await new Promise((r) => setTimeout(r, 1200))
-    setLoading(false)
-    setSubmitted(true)
-    setFormData({ name: "", email: "", message: "" })
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      })
+
+      const result = await response.json()
+
+      if (result.success) {
+        setSubmitted(true)
+        setFormData({ name: "", email: "", message: "" })
+      } else {
+        console.error("Form submission failed:", result)
+        alert("Something went wrong. Please email me directly.")
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error)
+      alert("Something went wrong. Please email me directly.")
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
     <section id="contact" className="py-28 relative">
-      <div className="orb w-[500px] h-[500px] bg-brand-blue/6 bottom-[-100px] right-[-100px] pointer-events-none" />
+
 
       <div className="section-container" ref={ref}>
         {/* Header */}
@@ -188,8 +214,8 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="Sanskar srivastava"
-                      className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-slate-200 placeholder-slate-600
-                                 focus:outline-none focus:border-brand-blue/40 focus:bg-white/[0.06] transition-all font-body"
+                      className="w-full bg-transparent border-2 border-white px-4 py-3 text-sm text-slate-200 placeholder-slate-600
+                                 focus:outline-none focus:border-brand-blue focus:bg-white/5 transition-all font-body rounded-none"
                     />
                   </div>
                   <div>
@@ -203,13 +229,13 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="name@example.com"
-                      className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-slate-200 placeholder-slate-600
-                                 focus:outline-none focus:border-brand-blue/40 focus:bg-white/[0.06] transition-all font-body"
+                      className="w-full bg-transparent border-2 border-white px-4 py-3 text-sm text-slate-200 placeholder-slate-600
+                                 focus:outline-none focus:border-brand-blue focus:bg-white/5 transition-all font-body rounded-none"
                     />
                   </div>
                   <div>
                     <label className="block font-mono text-xs text-slate-500 mb-2 tracking-widest uppercase">
-                      Message : This is Just a Demo Form
+                      Message :
                     </label>
                     <textarea
                       name="message"
@@ -218,8 +244,8 @@ export default function Contact() {
                       value={formData.message}
                       onChange={handleChange}
                       placeholder="Tell me about the opportunity or project..."
-                      className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-slate-200 placeholder-slate-600
-                                 focus:outline-none focus:border-brand-blue/40 focus:bg-white/[0.06] transition-all resize-none font-body"
+                      className="w-full bg-transparent border-2 border-white px-4 py-3 text-sm text-slate-200 placeholder-slate-600
+                                 focus:outline-none focus:border-brand-blue focus:bg-white/5 transition-all resize-none font-body rounded-none"
                     />
                   </div>
                   <button

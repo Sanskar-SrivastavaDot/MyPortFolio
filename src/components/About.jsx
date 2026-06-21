@@ -136,7 +136,7 @@ export default function About() {
                 </p>
                 <p className="font-display font-bold text-2xl gradient-text">300+</p>
                 <p className="font-body text-xs text-slate-500 mt-1">
-                  LeetCode · CodeForces · GFG
+                  LeetCode · CodeForces · CodeChef
                 </p>
               </div>
               <div className="w-px h-12 bg-white/10" />

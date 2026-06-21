@@ -4,13 +4,14 @@ export const projects = [
     title: "CivicAI",
     description:
       "An AI-assisted government portal for citizens to report civic issues, track official responses via authorities, and hold authorities accountable — transparently and efficiently.",
-    tags: ["React", "Node", "Express","MongoDB"],
+    tags: ["React", "Node", "Express", "MongoDB"],
     github: "https://github.com/Sanskar-SrivastavaDot/vertex-CivicAI",
     live: "https://vertex-ashy.vercel.app/",
     featured: true,
     gradient: "from-blue-500/20 to-violet-500/20",
     accent: "blue",
   },
+
   {
     id: 3,
     title: "Todo App",
