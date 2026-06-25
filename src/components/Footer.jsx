@@ -70,7 +70,7 @@ export default function Footer() {
               <a
                 key={s.label}
                 href={s.href}
-                target="_blank"
+                target={s.href.startsWith("mailto") ? undefined : "_blank"}
                 rel="noreferrer"
                 aria-label={s.label}
                 className="p-2.5 rounded-xl border border-white/[0.07] bg-white/[0.03] text-slate-500

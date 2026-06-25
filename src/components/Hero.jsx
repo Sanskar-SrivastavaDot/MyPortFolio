@@ -123,7 +123,7 @@ export default function Hero() {
             <a
               key={link.label}
               href={link.href}
-              target="_blank"
+              target={link.href.startsWith("mailto") ? undefined : "_blank"}
               rel="noreferrer"
               aria-label={link.label}
               className="p-3 border-2 border-white bg-transparent text-slate-300
